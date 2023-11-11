@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+}
+
+.nav-link:hover {
+  color: darkgoldenrod;
+}
+
+#navigation .navbar-nav li > a {
+  text-transform: capitalize;
+  color: #333;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover,
+  &:focus {
+    color: darkgoldenrod;
+  }
+}
+
+#navigation .navbar-nav li.active > a {
+  color: darkgoldenrod;
+  font-weight: 500;
+}
+
+a.nav-link button.btn,
+form button#btn-filled {
+  background-color: goldenrod;
+  color: white;
+  font-weight: 500;
+}
+
+a.nav-link button.btn:hover,
+form button#btn-filled:hover {
+  background-color: darkgoldenrod;
+  color: white;
+  font-weight: 500;
+}
+
+button.btn-outline {
+  border-color: darkgoldenrod;
+  color: darkgoldenrod;
+  font-weight: 500;
+}
+
+button.btn-outline:hover {
+  border-color: darkgoldenrod;
+  background-color: antiquewhite;
+  color: darkgoldenrod;
+}
+
+.carousel > .carousel-inner > .carousel-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  display: none;
+  padding: 0px;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: darkgoldenrod;
+}
+
+.chat-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: darkgoldenrod;
+  color: white;
+  font-size: 22px;
+  border: none;
+}
+
+.chat-btn .close {
+  display: none;
+}
+
+.chat-btn i {
+  transition: all 0.9s ease;
+}
+
+#check:checked ~ .chat-btn i {
+  display: block;
+  pointer-events: auto;
+}
+
+#check:checked ~ .chat-btn .comment {
+  display: none;
+}
+
+#check:checked ~ .wrapper {
+  opacity: 1;
+}
+
+.wrapper {
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  width: 300px;
+  background-color: gainsboro;
+  border-radius: 5px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.header {
+  padding: 13px;
+  background-color: darkgoldenrod;
+  border-radius: 5px 5px 0px 0px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.chat-form {
+  padding: 15px;
+}
+
+.chat-form input,
+textarea,
+button {
+  margin-bottom: 10px;
+}
+
+.chat-form textarea {
+  resize: none;
+}
+
+.form-control:focus,
+.btn:focus {
+  box-shadow: none;
+}
+
+#check {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    right: 80px;
+    bottom: 100px;
+    width: 280px;
+  }
+}
